@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CSEP.Views.RegistroUsuario">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Registro"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" FontSize="30"/>
+            <Entry x:Name="txtNEmail" Placeholder="Email" />
+            <Entry x:Name="txtNcontra" Placeholder="Contraseña" IsPassword="True" />
+            <Entry x:Name="txtNNombre" Placeholder="Nombre"/>
+            <Entry x:Name="txtNApellido" Placeholder="Apellido"/>
+            <Button BorderWidth="1" 
+            BorderColor="Black" 
+            BackgroundColor="WhiteSmoke"
+            BorderRadius="100"
+            ImageSource="Register.png"
+            FontSize="20"
+            TextColor="Black" Text="Registrar" x:Name="btnRegistrar"/>
+            <Button BorderWidth="1" 
+            BorderColor="black"
+            BackgroundColor="WhiteSmoke"
+            BorderRadius="20"
+            FontSize="20"
+            HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand"
+            TextColor="Black" Text="Atras"  x:Name="btnAtras" Clicked="btnAtras_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CSEP.Views.Busqueda">
+    <ContentPage.Content>
+        <Grid>
+            <Image Source="backgroudL.png" Aspect="Fill"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Text="Busqueda de paquete" VerticalOptions="End" HorizontalTextAlignment="Center" Margin="0,20,0,0" TextColor="Black" FontSize="30"/>
+
+                
+                <StackLayout Grid.Row="1" Padding="30,20">
+                    <Entry Placeholder="Numero de seguimiento"  x:Name="txtBusqueda"></Entry>
+                    <Button BorderWidth="1" 
+                        BorderColor="black"
+                        BackgroundColor="WhiteSmoke"
+                        BorderRadius="20"
+                        FontSize="20"
+                        Margin="0,10,0,10"
+                        TextColor="Black" Text="BUSCAR"  x:Name="btnBuscar"/>
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

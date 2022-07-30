@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CSEP.Views.Paquetes">
+    <ContentPage.Content>
+        
+        <StackLayout>
+            <Label Text="Paquetes"
+                   VerticalOptions="StartAndExpand"
+                   HorizontalOptions="CenterAndExpand"
+                   FontSize="30"
+                   Margin="0,20,0,20"
+                   TextColor="Black"/>
+            <ListView x:Name="listPaquetes"
+                      HasUnevenRows="True"
+                      SeparatorVisibility="None"
+                      SelectionMode="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell >
+                            <Grid Padding="5"
+                                  BackgroundColor="Transparent">
+                                <Frame BackgroundColor="LightGoldenrodYellow"
+                                       CornerRadius="20"
+                                       HasShadow="True">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="box.png"
+                                               HeightRequest="50"/>
+                                        <StackLayout >
+                                            <Label x:Name="lblnombre"
+                                                   Text="{Binding user}"
+                                                   FontSize="Large"
+                                                   TextColor="Black"/>
+                                            <Label x:Name="lbldesc"
+                                                   Text="{Binding paq_direccion}"/>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Frame>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
