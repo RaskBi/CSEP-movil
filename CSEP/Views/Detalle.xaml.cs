@@ -17,5 +17,7 @@ namespace CSEP.Views
             InitializeComponent();
             lblRepartidor.Text = "si";
         }
+
+
     }
 }
