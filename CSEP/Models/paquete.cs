@@ -14,6 +14,9 @@ namespace CSEP.Models
         public string paq_direccion { get; set; }
         public string paq_estado { get; set; }
         public int paq_numero { get; set; }
+        public string paq_latitud { get; set; }
+        public string paq_longitud { get; set; }
+        public string paq_telefono { get; set; }
 
     }
 }
