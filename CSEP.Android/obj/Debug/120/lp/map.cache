@@ -102,3 +102,10 @@ androidx.asynclayoutinflater.asynclayoutinflater.aar
 androidx.legacy.legacy-support-core-ui.aar
 androidx.legacy.legacy-support-v4.aar
 androidx.browser.browser.aar
+FastAndroidCamera.dll
+Plugin.CurrentActivity.dll
+Plugin.Media.dll
+Plugin.Permissions.dll
+Xamarin.Forms.Material.dll
+ZXing.Net.Mobile.Forms.Android.dll
+ZXingNetMobile.dll

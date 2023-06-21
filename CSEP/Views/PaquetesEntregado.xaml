@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CSEP.Views.PaquetesEntregado"
+             Title="Paquetes entregados"
+             BackgroundImageSource="back.jpg">
+    <ContentPage.Content>
+        <Grid>
+            <BoxView x:Name="bdGradient"
+                     Scale="3"
+                     AnchorX="1"
+                     AnchorY="0">
+                <BoxView.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#000046"
+                                      Offset="0.1" />
+                        <GradientStop Color="#1CB5E0"
+                                      Offset="0.5" />
+                        <GradientStop Color="#159957"
+                                      Offset="1.0" />
+                    </LinearGradientBrush>
+                </BoxView.Background>
+            </BoxView>
+            <StackLayout>
+                <Label Text="Paquetes"
+                       VerticalOptions="StartAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       FontSize="30"
+                       Margin="0,20,0,20"
+                       TextColor="Black" />
+                <ListView x:Name="listPaquetes"
+                          HasUnevenRows="True"
+                          SeparatorVisibility="None"
+                          ItemTapped="listPaquetes_ItemTapped">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Padding="5"
+                                      BackgroundColor="Transparent">
+                                    <Frame BackgroundColor="LightGoldenrodYellow"
+                                           CornerRadius="20"
+                                           HasShadow="True">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Image Source="box.png"
+                                                   HeightRequest="50" />
+                                            <StackLayout>
+                                                <Label x:Name="lblnombre"
+                                                       Text="{Binding user}"
+                                                       FontSize="Large"
+                                                       TextColor="Black" />
+                                                <Label x:Name="lbldesc"
+                                                       Text="{Binding paq_direccion}"
+                                                       TextColor="Black" />
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </Frame>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
