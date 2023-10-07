@@ -14,7 +14,7 @@
             <ListView x:Name="listPaquetes"
                       HasUnevenRows="True"
                       SeparatorVisibility="None"
-                      SelectionMode="None">
+                      ItemSelected="listPaquetes_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell >

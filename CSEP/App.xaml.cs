@@ -10,7 +10,7 @@ namespace CSEP
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Views.Detalle());
+            MainPage = new NavigationPage(new Views.Login());
         }
 
         protected override void OnStart()

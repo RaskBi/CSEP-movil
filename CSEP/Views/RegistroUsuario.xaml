@@ -3,28 +3,45 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CSEP.Views.RegistroUsuario">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Registro"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" FontSize="30"/>
-            <Entry x:Name="txtNEmail" Placeholder="Email" />
-            <Entry x:Name="txtNcontra" Placeholder="Contraseña" IsPassword="True" />
-            <Entry x:Name="txtNNombre" Placeholder="Nombre"/>
-            <Entry x:Name="txtNApellido" Placeholder="Apellido"/>
-            <Button BorderWidth="1" 
-            BorderColor="Black" 
-            BackgroundColor="WhiteSmoke"
-            BorderRadius="100"
-            ImageSource="Register.png"
-            FontSize="20"
-            TextColor="Black" Text="Registrar" x:Name="btnRegistrar"/>
-            <Button BorderWidth="1" 
-            BorderColor="black"
-            BackgroundColor="WhiteSmoke"
-            BorderRadius="20"
-            FontSize="20"
-            HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand"
-            TextColor="Black" Text="Atras"  x:Name="btnAtras" Clicked="btnAtras_Clicked"/>
-        </StackLayout>
+        <Grid>
+            <Image Source="backgroudL.png" Aspect="Fill"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Text="Registro" VerticalOptions="End" HorizontalTextAlignment="Center" Margin="0,20,0,0" TextColor="Black" FontSize="40"/>
+
+                <Image Grid.Row="1" Source="signUp.png" WidthRequest="100" HeightRequest="120" Margin="0,20,0,30"/>
+
+                <StackLayout Grid.Row="2" Padding="30,20">
+                    <Entry x:Name="txtNEmail" Placeholder="Email" />
+                    <Entry x:Name="txtNcontra" Placeholder="Contraseña" IsPassword="True" />
+                    <Entry x:Name="txtNNombre" Placeholder="Nombre"/>
+                    <Entry x:Name="txtNApellido" Placeholder="Apellido"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="¿Eres repartidor?" FontSize="17" TextColor="Black" VerticalOptions="Center"/>
+                        <CheckBox CheckedChanged="CheckBox_CheckedChanged" Color="Black"/>
+                    </StackLayout>
+                    <Button BorderWidth="1"
+                            BorderColor="Black" 
+                            BackgroundColor="WhiteSmoke"
+                            BorderRadius="100"
+                            ImageSource="Register.png"
+                            FontSize="20"
+                            Margin="0,30,0,0"
+                            TextColor="Black" Text="Registrarse" x:Name="btnRegistrar"/>
+                    <Button BorderWidth="1"
+                            BorderColor="black"
+                            BackgroundColor="WhiteSmoke"
+                            BorderRadius="20"
+                            FontSize="20"
+                            HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand"
+                            TextColor="Black" Text="Atras"  x:Name="btnAtras" Clicked="btnAtras_Clicked"/>
+                </StackLayout>
+            </Grid>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

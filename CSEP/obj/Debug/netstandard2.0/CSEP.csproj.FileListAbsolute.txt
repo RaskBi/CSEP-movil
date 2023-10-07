@@ -18,3 +18,4 @@ C:\Users\Rask\source\repos\CSEP\CSEP\obj\Debug\netstandard2.0\Views\Login.xaml.g
 C:\Users\Rask\source\repos\CSEP\CSEP\obj\Debug\netstandard2.0\Views\RegistroUsuario.xaml.g.cs
 C:\Users\Rask\source\repos\CSEP\CSEP\obj\Debug\netstandard2.0\Views\Paquetes.xaml.g.cs
 C:\Users\Rask\source\repos\CSEP\CSEP\obj\Debug\netstandard2.0\Views\Detalle.xaml.g.cs
+C:\Users\Rask\source\repos\CSEP\CSEP\obj\Debug\netstandard2.0\Views\DetalleR.xaml.g.cs

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CSEP.Views.DetalleR">
+    <ContentPage.Content>
+        <Grid>
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="10*"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" Grid.ColumnSpan="2" Text="Paquetes" HorizontalOptions="Center" VerticalOptions="End" TextColor="Black" FontSize="30"/>
+
+                <Label Grid.Column="0" Grid.Row="1" Text="Repartidor:" VerticalOptions="Center" Margin="30,0,0,0" TextColor="Black" FontAttributes="Bold" FontSize="20"/>
+                <Label Grid.Column="0" Grid.Row="2" Text="Cliente:" VerticalOptions="Center" Margin="30,0,0,0" TextColor="Black" FontAttributes="Bold" FontSize="20"/>
+                <Label Grid.Column="0" Grid.Row="3" Text="Dirección:" VerticalOptions="Center" Margin="30,0,0,0" TextColor="Black" FontAttributes="Bold" FontSize="20"/>
+                <Label Grid.Column="0" Grid.Row="4" Text="Teléfono:" VerticalOptions="Center" Margin="30,0,0,0" TextColor="Black" FontAttributes="Bold" FontSize="20"/>
+                <Label Grid.Column="0" Grid.Row="5" Text="Código:" VerticalOptions="Center" Margin="30,0,0,0" TextColor="Black" FontAttributes="Bold" FontSize="20"/>
+                <Label Grid.Column="0" Grid.Row="6" Text="Estado:" VerticalOptions="Center" Margin="30,0,0,0" TextColor="Black" FontAttributes="Bold" FontSize="20"/>
+
+                <Label Grid.Column="1" Grid.Row="1" x:Name="lblRepartidor" VerticalOptions="Center" TextColor="Black" FontSize="17"/>
+                <Label Grid.Column="1" Grid.Row="2" x:Name="lblCliente" VerticalOptions="Center" TextColor="Black" FontSize="17"/>
+                <Label Grid.Column="1" Grid.Row="3" x:Name="lblDirección" VerticalOptions="Center" TextColor="Black" FontSize="17"/>
+                <Label Grid.Column="1" Grid.Row="4" x:Name="lblTeléfono" VerticalOptions="Center" TextColor="Black" FontSize="17"/>
+                <Label Grid.Column="1" Grid.Row="5" x:Name="lblCódigo" VerticalOptions="Center" TextColor="Black" FontSize="17"/>
+                <Label Grid.Column="1" Grid.Row="6" x:Name="lblEstado" VerticalOptions="Center" TextColor="Black" FontSize="17"/>
+
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

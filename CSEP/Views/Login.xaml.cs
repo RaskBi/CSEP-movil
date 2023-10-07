@@ -102,9 +102,9 @@ namespace CSEP.Views
             await Navigation.PushAsync(new RegistroUsuario());
         }
 
-        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        async private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-
+            await DisplayAlert("Alerta", "¡Te enviaremos un correo!", "OK");
         }
     }
 }

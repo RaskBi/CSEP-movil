@@ -16,5 +16,11 @@ namespace CSEP.Views
         {
             InitializeComponent();
         }
+
+        async private void btnBuscar_Clicked(object sender, EventArgs e)
+        {
+            var code = txtBusqueda.Text;
+            await Navigation.PushAsync(new Detalle(code));
+        }
     }
 }

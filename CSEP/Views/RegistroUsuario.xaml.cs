@@ -21,5 +21,14 @@ namespace CSEP.Views
         {
             await Navigation.PushAsync(new Login());
         }
+
+        async private void CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        {
+            if(e.Value == true)
+            {
+                await DisplayAlert("Alerta", "¿Seguro que quieres registrarte como Repartidor y no como Cliente?", "OK");
+            }
+            
+        }
     }
 }

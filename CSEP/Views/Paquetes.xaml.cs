@@ -45,10 +45,8 @@ namespace CSEP.Views
                     _paquete = new ObservableCollection<paquete>(post);
 
                     listPaquetes.ItemsSource = _paquete;
-                    //item selected
-                    /*var select = ((ListView)sender).SelectedItem as paquete;
-                    if (select == null)
-                        return;
+                    
+                    /*
                     var nombre = select.paq_numero;
                     var desc = select.paq_direccion;*/
                 }
@@ -58,6 +56,15 @@ namespace CSEP.Views
             {
                 await DisplayAlert("Alerta", ex.Message, "OK");
             }
+        }
+
+        async private void listPaquetes_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var select = ((ListView)sender).SelectedItem as paquete;
+            if (select == null)
+                return;
+            var code= select.paq_numero;
+            await Navigation.PushAsync(new DetalleR(code.ToString()));
         }
     }
 }

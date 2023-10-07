@@ -640,3 +640,4 @@ C:\Users\Rask\source\repos\CSEP\CSEP.Android\obj\Debug\120\android\assets\System
 C:\Users\Rask\source\repos\CSEP\CSEP.Android\obj\Debug\120\res\drawable\box.png
 C:\Users\Rask\source\repos\CSEP\CSEP.Android\obj\Debug\120\res\drawable\icon.png
 C:\Users\Rask\source\repos\CSEP\CSEP.Android\obj\Debug\120\res\drawable\backgroundl.png
+C:\Users\Rask\source\repos\CSEP\CSEP.Android\obj\Debug\120\res\drawable\signup.png
