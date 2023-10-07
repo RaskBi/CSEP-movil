@@ -1,47 +1,94 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CSEP.Views.RegistroUsuario">
+             x:Class="CSEP.Views.RegistroUsuario"
+             BackgroundImageSource="back.jpg"
+             Title="Registro">
     <ContentPage.Content>
-        <Grid>
-            <Image Source="backgroudL.png" Aspect="Fill"/>
-
+        <ScrollView>
             <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Label Grid.Row="0" Text="Registro" VerticalOptions="End" HorizontalTextAlignment="Center" Margin="0,20,0,0" TextColor="Black" FontSize="40"/>
-
-                <Image Grid.Row="1" Source="signUp.png" WidthRequest="100" HeightRequest="120" Margin="0,20,0,30"/>
-
-                <StackLayout Grid.Row="2" Padding="30,20">
-                    <Entry x:Name="txtNEmail" Placeholder="Email" />
-                    <Entry x:Name="txtNcontra" Placeholder="Contraseña" IsPassword="True" />
-                    <Entry x:Name="txtNNombre" Placeholder="Nombre"/>
-                    <Entry x:Name="txtNApellido" Placeholder="Apellido"/>
-                    <StackLayout Orientation="Horizontal">
-                        <Label Text="¿Eres repartidor?" FontSize="17" TextColor="Black" VerticalOptions="Center"/>
-                        <CheckBox CheckedChanged="CheckBox_CheckedChanged" Color="Black"/>
-                    </StackLayout>
-                    <Button BorderWidth="1"
-                            BorderColor="Black" 
-                            BackgroundColor="WhiteSmoke"
-                            BorderRadius="100"
-                            ImageSource="Register.png"
-                            FontSize="20"
-                            Margin="0,30,0,0"
-                            TextColor="Black" Text="Registrarse" x:Name="btnRegistrar"/>
-                    <Button BorderWidth="1"
-                            BorderColor="black"
-                            BackgroundColor="WhiteSmoke"
-                            BorderRadius="20"
-                            FontSize="20"
-                            HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand"
-                            TextColor="Black" Text="Atras"  x:Name="btnAtras" Clicked="btnAtras_Clicked"/>
-                </StackLayout>
+                <BoxView x:Name="bdGradient"
+                         Scale="3"
+                         AnchorX="1"
+                         AnchorY="0">
+                    <BoxView.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Color="#000046"
+                                          Offset="0.1" />
+                            <GradientStop Color="#1CB5E0"
+                                          Offset="0.5" />
+                            <GradientStop Color="#159957"
+                                          Offset="1.0" />
+                        </LinearGradientBrush>
+                    </BoxView.Background>
+                </BoxView>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0"
+                           Text="Registro"
+                           VerticalOptions="End"
+                           HorizontalTextAlignment="Center"
+                           Margin="0,20,0,0"
+                           TextColor="Black"
+                           FontSize="40"
+                           FontAttributes="Bold" />
+                    <Frame Grid.Row="2"
+                           CornerRadius="10"
+                           Margin="30,50,30,50"
+                           BackgroundColor="#B3FFFFFF">
+                        <StackLayout >
+                            <Entry x:Name="txtEmail"
+                                   Placeholder="Email"
+                                   TextColor="Black"
+                                   Keyboard="Email"
+                                   PlaceholderColor="Gray" />
+                            <Entry x:Name="txtcontrasenia"
+                                   Placeholder="Contraseña"
+                                   IsPassword="True"
+                                   TextColor="Black"
+                                   PlaceholderColor="Gray" />
+                            <Entry x:Name="txtNombre"
+                                   Placeholder="Nombre"
+                                   TextColor="Black"
+                                   PlaceholderColor="Gray" />
+                            <Entry x:Name="txtApellido"
+                                   Placeholder="Apellido"
+                                   TextColor="Black"
+                                   PlaceholderColor="Gray" />
+                            <Entry x:Name="txtCedula"
+                                   Placeholder="Cedula"
+                                   TextColor="Black"
+                                   PlaceholderColor="Gray" />
+                            <Entry x:Name="txtUserName"
+                                   Placeholder="Apodo"
+                                   TextColor="Black"
+                                   PlaceholderColor="Gray" />
+                            
+                            <Button BackgroundColor="#E6003e69"
+                                    BorderRadius="6"
+                                    ImageSource="Register.png"
+                                    FontSize="20"
+                                    Margin="0,20,0,0"
+                                    TextColor="WhiteSmoke"
+                                    Text="Registrarse"
+                                    x:Name="btnRegistrar"
+                                    Clicked="btnRegistrar_Clicked" />
+                            <Button BackgroundColor="WhiteSmoke"
+                                    BorderRadius="6"
+                                    FontSize="20"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="StartAndExpand"
+                                    TextColor="Black"
+                                    Text="Atras"
+                                    x:Name="btnAtras"
+                                    Clicked="btnAtras_Clicked" />
+                        </StackLayout>
+                    </Frame>
+                </Grid>
             </Grid>
-        </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

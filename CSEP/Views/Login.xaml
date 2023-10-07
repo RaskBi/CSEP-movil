@@ -2,47 +2,77 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CSEP.Views.Login"
-             NavigationPage.HasNavigationBar="false">
+             NavigationPage.HasNavigationBar="false"
+             BackgroundImageSource="back.jpg">
     <ContentPage.Content>
         <Grid>
-            <Image Source="backgroudL.png" Aspect="Fill"/>
-            
+            <BoxView x:Name="bdGradient"
+                     Scale="3"
+                     AnchorX="1"
+                     AnchorY="0">
+                <BoxView.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#000046"
+                                      Offset="0.1" />
+                        <GradientStop Color="#1CB5E0"
+                                      Offset="0.5" />
+                        <GradientStop Color="#159957"
+                                      Offset="1.0" />
+                    </LinearGradientBrush>
+                </BoxView.Background>
+            </BoxView>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <Label Grid.Row="0" Text="Login" VerticalOptions="End" HorizontalTextAlignment="Center" Margin="0,20,0,0" TextColor="Black" FontSize="40"/>
-
-                <Image Grid.Row="1" Source="icon.png" WidthRequest="100" HeightRequest="150" Margin="0,20,0,30"/>
-
-                <StackLayout Grid.Row="2" Padding="30,20">
-                    <Entry Placeholder="Usuario"  x:Name="txtUsername"></Entry>
-                    <Entry Placeholder="Contraseña" IsPassword="True"  x:Name="txtPass" ></Entry>
-                    <Button BorderWidth="1" 
-                    BorderColor="black"
-                    BackgroundColor="WhiteSmoke"
-                    BorderRadius="20"
-                    FontSize="20"
-                    Margin="0,30,0,0"
-                    TextColor="Black" Text="Ingresar"  x:Name="btnIngresar" Clicked="btnIngresar_Clicked"/>
-                    <Button BorderWidth="1" 
-                    BorderColor="black"
-                    BackgroundColor="WhiteSmoke"
-                    BorderRadius="20"
-                    FontSize="20"
-                    Margin="0,0,0,10"
-                    TextColor="Black" Text="Registrarse"  x:Name="btnRegistrarse" Clicked="btnRegistrarse_Clicked"/>
-                    <StackLayout>
-                        <Label Text="Recuperar contraseña" FontAttributes="Bold" HorizontalOptions="Center">
-                            <Label.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                            </Label.GestureRecognizers>
-                        </Label>
+                <Frame Grid.Row="1"
+                       CornerRadius="10"
+                       Margin="30,50,30,50"
+                       BackgroundColor="#B3FFFFFF">
+                    <StackLayout Padding="10,25">
+                        <Image Grid.Row="0"
+                               Source="logo.png"
+                               WidthRequest="200"
+                               Margin="0,0,0,0" />
+                        <Entry   Placeholder="Usuario"
+                                 x:Name="txtUsername"
+                                 TextColor="Black"
+                                 PlaceholderColor="Gray" />
+                        <Entry   Placeholder="Contraseña"
+                                 IsPassword="True"
+                                 x:Name="txtPass"
+                                 TextColor="Black"
+                                 PlaceholderColor="Gray" />
+                        <Button BackgroundColor="#E6003e69"
+                                BorderRadius="6"
+                                FontSize="20"
+                                Margin="0,30,0,0"
+                                TextColor="WhiteSmoke"
+                                Text="Ingresar"
+                                x:Name="btnIngresar"
+                                Clicked="btnIngresar_Clicked" />
+                        <Button BackgroundColor="#E6003e69"
+                                BorderRadius="6"
+                                FontSize="20"
+                                Margin="0,0,0,10"
+                                TextColor="WhiteSmoke"
+                                Text="Registrarse"
+                                x:Name="btnRegistrarse"
+                                Clicked="btnRegistrarse_Clicked" />
+                        <StackLayout>
+                            <Label Text="Recuperar contraseña"
+                                   TextColor="Black"
+                                   FontAttributes="Bold"
+                                   HorizontalOptions="Center">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </StackLayout>
                     </StackLayout>
-                </StackLayout>
+                </Frame>
+
+
             </Grid>
         </Grid>
     </ContentPage.Content>

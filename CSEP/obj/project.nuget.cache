@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4Qn3A68MdAu8XyvC152ISOumXMEyZ1ufM8/93V4uDXrULxSuwR3qGOJqjNmpqH6ALWddfzcmjtBUdJddsAnkZA==",
+  "dgSpecHash": "lprcj13bOF8RWGmyAD8DD/ek64WmpDKf3qY6Z8wzAR/39xbEetgfYztgAvad68dY+xyiMvS/b/QGOEHEZ3hhyw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Rask\\source\\repos\\CSEP\\CSEP\\CSEP.csproj",
+  "projectFilePath": "D:\\Rask\\OneDrive - integrate transparent metrics\\Documentos\\UIS 9\\Titulación\\Mobile\\CSEP\\CSEP\\CSEP.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Rask\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",
     "C:\\Users\\Rask\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
@@ -16,8 +16,13 @@
     "C:\\Users\\Rask\\.nuget\\packages\\system.text.encodings.web\\5.0.0\\system.text.encodings.web.5.0.0.nupkg.sha512",
     "C:\\Users\\Rask\\.nuget\\packages\\system.text.json\\5.0.0\\system.text.json.5.0.0.nupkg.sha512",
     "C:\\Users\\Rask\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+    "C:\\Users\\Rask\\.nuget\\packages\\xam.plugin.media\\5.0.1\\xam.plugin.media.5.0.1.nupkg.sha512",
     "C:\\Users\\Rask\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
-    "C:\\Users\\Rask\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+    "C:\\Users\\Rask\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512",
+    "C:\\Users\\Rask\\.nuget\\packages\\xamarin.forms.saveopenpdfpackage\\1.0.0\\xamarin.forms.saveopenpdfpackage.1.0.0.nupkg.sha512",
+    "C:\\Users\\Rask\\.nuget\\packages\\xamarin.forms.visual.material\\5.0.0.2196\\xamarin.forms.visual.material.5.0.0.2196.nupkg.sha512",
+    "C:\\Users\\Rask\\.nuget\\packages\\zxing.net.mobile\\2.4.1\\zxing.net.mobile.2.4.1.nupkg.sha512",
+    "C:\\Users\\Rask\\.nuget\\packages\\zxing.net.mobile.forms\\2.4.1\\zxing.net.mobile.forms.2.4.1.nupkg.sha512"
   ],
   "logs": []
 }

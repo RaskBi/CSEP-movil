@@ -14,5 +14,8 @@
     <!-- colorAccent is used as the default value for colorControlActivated
          which is used to tint widgets -->
     <!--<item name="colorAccent">#FF4081</item>-->
+    <item name="android:colorActivatedHighlight">@color/ListViewSelected</item>
+    
   </style>
+  <color name="ListViewSelected">#00000000</color>
 </resources>

@@ -1,35 +1,38 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rask\\source\\repos\\CSEP\\CSEP.Android\\CSEP.Android.csproj": {}
+    "D:\\Rask\\OneDrive - integrate transparent metrics\\Documentos\\UIS 9\\Titulación\\Mobile\\CSEP\\CSEP.Android\\CSEP.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rask\\source\\repos\\CSEP\\CSEP.Android\\CSEP.Android.csproj": {
+    "D:\\Rask\\OneDrive - integrate transparent metrics\\Documentos\\UIS 9\\Titulación\\Mobile\\CSEP\\CSEP.Android\\CSEP.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rask\\source\\repos\\CSEP\\CSEP.Android\\CSEP.Android.csproj",
+        "projectUniqueName": "D:\\Rask\\OneDrive - integrate transparent metrics\\Documentos\\UIS 9\\Titulación\\Mobile\\CSEP\\CSEP.Android\\CSEP.Android.csproj",
         "projectName": "CSEP.Android",
-        "projectPath": "C:\\Users\\Rask\\source\\repos\\CSEP\\CSEP.Android\\CSEP.Android.csproj",
+        "projectPath": "D:\\Rask\\OneDrive - integrate transparent metrics\\Documentos\\UIS 9\\Titulación\\Mobile\\CSEP\\CSEP.Android\\CSEP.Android.csproj",
         "packagesPath": "C:\\Users\\Rask\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rask\\source\\repos\\CSEP\\CSEP.Android\\obj\\",
+        "outputPath": "D:\\Rask\\OneDrive - integrate transparent metrics\\Documentos\\UIS 9\\Titulación\\Mobile\\CSEP\\CSEP.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\Rask\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "monoandroid12.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "monoandroid12.0": {
             "projectReferences": {
-              "C:\\Users\\Rask\\source\\repos\\CSEP\\CSEP\\CSEP.csproj": {
-                "projectPath": "C:\\Users\\Rask\\source\\repos\\CSEP\\CSEP\\CSEP.csproj"
+              "D:\\Rask\\OneDrive - integrate transparent metrics\\Documentos\\UIS 9\\Titulación\\Mobile\\CSEP\\CSEP\\CSEP.csproj": {
+                "projectPath": "D:\\Rask\\OneDrive - integrate transparent metrics\\Documentos\\UIS 9\\Titulación\\Mobile\\CSEP\\CSEP\\CSEP.csproj"
               }
             }
           }
@@ -38,6 +41,10 @@
       "frameworks": {
         "monoandroid12.0": {
           "dependencies": {
+            "Xam.Plugin.Media": {
+              "target": "Package",
+              "version": "[4.0.1.5, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.7.0, )"
@@ -45,29 +52,37 @@
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[5.0.0.2196, )"
+            },
+            "Xamarin.Forms.Visual.Material": {
+              "target": "Package",
+              "version": "[5.0.0.2196, )"
             }
           }
         }
       }
     },
-    "C:\\Users\\Rask\\source\\repos\\CSEP\\CSEP\\CSEP.csproj": {
+    "D:\\Rask\\OneDrive - integrate transparent metrics\\Documentos\\UIS 9\\Titulación\\Mobile\\CSEP\\CSEP\\CSEP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rask\\source\\repos\\CSEP\\CSEP\\CSEP.csproj",
+        "projectUniqueName": "D:\\Rask\\OneDrive - integrate transparent metrics\\Documentos\\UIS 9\\Titulación\\Mobile\\CSEP\\CSEP\\CSEP.csproj",
         "projectName": "CSEP",
-        "projectPath": "C:\\Users\\Rask\\source\\repos\\CSEP\\CSEP\\CSEP.csproj",
+        "projectPath": "D:\\Rask\\OneDrive - integrate transparent metrics\\Documentos\\UIS 9\\Titulación\\Mobile\\CSEP\\CSEP\\CSEP.csproj",
         "packagesPath": "C:\\Users\\Rask\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rask\\source\\repos\\CSEP\\CSEP\\obj\\",
+        "outputPath": "D:\\Rask\\OneDrive - integrate transparent metrics\\Documentos\\UIS 9\\Titulación\\Mobile\\CSEP\\CSEP\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\Rask\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -100,6 +115,10 @@
               "target": "Package",
               "version": "[108.0.1, )"
             },
+            "Xam.Plugin.Media": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.7.0, )"
@@ -107,6 +126,22 @@
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[5.0.0.2196, )"
+            },
+            "Xamarin.Forms.SaveOpenPDFPackage": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Xamarin.Forms.Visual.Material": {
+              "target": "Package",
+              "version": "[5.0.0.2196, )"
+            },
+            "ZXing.Net.Mobile": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "ZXing.Net.Mobile.Forms": {
+              "target": "Package",
+              "version": "[2.4.1, )"
             }
           },
           "imports": [
@@ -115,11 +150,12 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,30 +1,87 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CSEP.Views.Busqueda">
+             x:Class="CSEP.Views.Busqueda"
+             BackgroundImageSource="back.jpg"
+             Title="Busqueda">
     <ContentPage.Content>
-        <Grid>
-            <Image Source="backgroudL.png" Aspect="Fill"/>
-
+        <ScrollView>
             <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Label Grid.Row="0" Text="Busqueda de paquete" VerticalOptions="End" HorizontalTextAlignment="Center" Margin="0,20,0,0" TextColor="Black" FontSize="30"/>
-
-
-                <StackLayout Grid.Row="1" Padding="30,20">
-                    <Entry Placeholder="Numero de seguimiento"  x:Name="txtBusqueda"></Entry>
-                    <Button BorderWidth="1" 
-                        BorderColor="black"
-                        BackgroundColor="WhiteSmoke"
-                        BorderRadius="20"
-                        FontSize="20"
-                        Margin="0,10,0,10"
-                        TextColor="Black" Text="BUSCAR"  x:Name="btnBuscar" Clicked="btnBuscar_Clicked"/>
-                </StackLayout>
+                <BoxView x:Name="bdGradient"
+                         Scale="3"
+                         AnchorX="1"
+                         AnchorY="0">
+                    <BoxView.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Color="#000046"
+                                          Offset="0.1" />
+                            <GradientStop Color="#1CB5E0"
+                                          Offset="0.5" />
+                            <GradientStop Color="#159957"
+                                          Offset="1.0" />
+                        </LinearGradientBrush>
+                    </BoxView.Background>
+                </BoxView>
+                <Grid RowDefinitions="AUTO,*">
+                    <Label Grid.Row="0"
+                           Text="Busqueda de paquete"
+                           VerticalOptions="End"
+                           HorizontalTextAlignment="Center"
+                           Margin="0,20,0,0"
+                           TextColor="Black"
+                           FontSize="30"
+                           FontAttributes="Bold" />
+                    <StackLayout Padding="30,20"
+                                 Grid.Row="1">
+                        <Frame CornerRadius="10"
+                               Padding="30,20"
+                               BackgroundColor="#B3FFFFFF">
+                            <StackLayout>
+                                <Entry Placeholder="Numero de seguimiento"
+                                       x:Name="txtBusqueda"
+                                       TextColor="Black"
+                                       PlaceholderColor="Gray"/>
+                                <Button BackgroundColor="#E6003e69"
+                                        BorderRadius="6"
+                                        FontSize="20"
+                                        Margin="0,10,0,10"
+                                        TextColor="WhiteSmoke"
+                                        Text="BUSCAR"
+                                        x:Name="btnBuscar"
+                                        Clicked="btnBuscar_Clicked" />
+                            </StackLayout>
+                        </Frame>
+                        <StackLayout Grid.Row="2"
+                                     Margin="0,20">
+                            <Label Text="----También puedes----"
+                                   TextColor="Black"
+                                   FontSize="30"
+                                   HorizontalTextAlignment="Center" />
+                        </StackLayout >
+                        <Frame CornerRadius="10"
+                               Padding="30,20"
+                               Grid.Row="3"
+                               BackgroundColor="#B3FFFFFF">
+                            <StackLayout>
+                                <Label Text="Escanear el codigo de barras de tu paquete"
+                                       TextColor="Black"
+                                       HorizontalOptions="Center"
+                                       HorizontalTextAlignment="Center"
+                                       FontSize="20" />
+                                <Button BackgroundColor="#E6003e69"
+                                        BorderRadius="6"
+                                        FontSize="20"
+                                        Margin="0,20,0,10"
+                                        TextColor="WhiteSmoke"
+                                        Text="Escanear"
+                                        x:Name="btnScan"
+                                        Clicked="btnScan_Clicked" />
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </Grid>
             </Grid>
-        </Grid>
+            
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -22,49 +23,66 @@ namespace CSEP.Views
         public Paquetes()
         {
             InitializeComponent();
+            Task.Run(AnimateBackground);
             getPaquete();
         }
 
         public async void getPaquete()
         {
+            var fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "token.txt");
+            string tokenRead = File.ReadAllText(fileName);
+            Console.WriteLine(tokenRead);
             try
             {
                 var client = new HttpClient();
                 var request = new HttpRequestMessage
                 {
                     Method = HttpMethod.Get,
-                    RequestUri = new Uri(url.baseurl + "/paquete/get/paquete"),
+                    RequestUri = new Uri(url.baseurl + "/paquete/get/listaenesperarepartidor"),
+                    Headers =
+                    {
+                        { "Authorization", "Token " + tokenRead },
+                    },
                 };
                 using (var response = await client.SendAsync(request))
                 {
                     response.EnsureSuccessStatusCode();
                     var body = await response.Content.ReadAsStringAsync();
                     Console.WriteLine(body);
-                    //ItemSource
                     List<paquete> post = JsonConvert.DeserializeObject<List<paquete>>(body);
                     _paquete = new ObservableCollection<paquete>(post);
-
                     listPaquetes.ItemsSource = _paquete;
-                    
-                    /*
-                    var nombre = select.paq_numero;
-                    var desc = select.paq_direccion;*/
+                    Title = $"Paquetes por entregar ({_paquete.Count})";
                 }
             }
-
             catch (Exception ex)
             {
                 await DisplayAlert("Alerta", ex.Message, "OK");
             }
         }
 
-        async private void listPaquetes_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+
+        private async void listPaquetes_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var select = ((ListView)sender).SelectedItem as paquete;
             if (select == null)
                 return;
-            var code= select.paq_numero;
+            var code = select.paq_numero;
             await Navigation.PushAsync(new DetalleR(code.ToString()));
+        }
+        private async void AnimateBackground()
+        {
+            Action<Double> forward = input => bdGradient.AnchorY = input;
+            Action<Double> backward = input => bdGradient.AnchorY = input;
+
+            while (true)
+            {
+                bdGradient.Animate(name: "forward", callback: forward, start: 0, end: 1, length: 5000, easing: Easing.SinIn);
+                await Task.Delay(5000);
+
+                bdGradient.Animate(name: "backward", callback: forward, start: 1, end: 0, length: 5000, easing: Easing.SinIn);
+                await Task.Delay(5000);
+            }
         }
     }
 }

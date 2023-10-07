@@ -1,42 +1,248 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CSEP.Views.DetalleR">
+             x:Class="CSEP.Views.DetalleR"
+             BackgroundImageSource="back.jpg"
+             Title="Por entregar">
     <ContentPage.Content>
-        <Grid>
-            <Grid >
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition Width="3*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="50" />
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="10*"/>
-                </Grid.RowDefinitions>
+        <ScrollView>
+            <Grid>
+                <BoxView x:Name="bdGradient"
+                         Scale="3"
+                         AnchorX="1"
+                         AnchorY="0">
+                    <BoxView.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Color="#000046"
+                                          Offset="0.1" />
+                            <GradientStop Color="#1CB5E0"
+                                          Offset="0.5" />
+                            <GradientStop Color="#159957"
+                                          Offset="1.0" />
+                        </LinearGradientBrush>
+                    </BoxView.Background>
+                </BoxView>
+                <Grid ColumnDefinitions="*,*"
+                      RowDefinitions="50,AUTO,AUTO,50,50,*">
 
-                <Label Grid.Row="0" Grid.ColumnSpan="2" Text="Paquetes" HorizontalOptions="Center" VerticalOptions="End" TextColor="Black" FontSize="30"/>
+                    <Label Grid.Row="0"
+                           Grid.ColumnSpan="2"
+                           Text="Detalles"
+                           HorizontalOptions="Center"
+                           VerticalOptions="End"
+                           TextColor="Black"
+                           FontAttributes="Bold"
+                           FontSize="30" />
+                    <Image Grid.Row="1"
+                           Grid.ColumnSpan="2"
+                           Source="icon.png"
+                           WidthRequest="50"
+                           HeightRequest="50"
+                           Margin="0,10,0,0" />
 
-                <Label Grid.Column="0" Grid.Row="1" Text="Repartidor:" VerticalOptions="Center" Margin="30,0,0,0" TextColor="Black" FontAttributes="Bold" FontSize="20"/>
-                <Label Grid.Column="0" Grid.Row="2" Text="Cliente:" VerticalOptions="Center" Margin="30,0,0,0" TextColor="Black" FontAttributes="Bold" FontSize="20"/>
-                <Label Grid.Column="0" Grid.Row="3" Text="Dirección:" VerticalOptions="Center" Margin="30,0,0,0" TextColor="Black" FontAttributes="Bold" FontSize="20"/>
-                <Label Grid.Column="0" Grid.Row="4" Text="Teléfono:" VerticalOptions="Center" Margin="30,0,0,0" TextColor="Black" FontAttributes="Bold" FontSize="20"/>
-                <Label Grid.Column="0" Grid.Row="5" Text="Código:" VerticalOptions="Center" Margin="30,0,0,0" TextColor="Black" FontAttributes="Bold" FontSize="20"/>
-                <Label Grid.Column="0" Grid.Row="6" Text="Estado:" VerticalOptions="Center" Margin="30,0,0,0" TextColor="Black" FontAttributes="Bold" FontSize="20"/>
+                    <Frame Grid.ColumnSpan="2"
+                           Grid.Row="2"
+                           CornerRadius="10"
+                           Margin="10,0"
+                           BackgroundColor="#B3FFFFFF">
+                        <StackLayout>
+                            <Grid RowDefinitions="*,*,*,*,*,*,*,*"
+                                  ColumnDefinitions="Auto,4*">
 
-                <Label Grid.Column="1" Grid.Row="1" x:Name="lblRepartidor" VerticalOptions="Center" TextColor="Black" FontSize="17"/>
-                <Label Grid.Column="1" Grid.Row="2" x:Name="lblCliente" VerticalOptions="Center" TextColor="Black" FontSize="17"/>
-                <Label Grid.Column="1" Grid.Row="3" x:Name="lblDirección" VerticalOptions="Center" TextColor="Black" FontSize="17"/>
-                <Label Grid.Column="1" Grid.Row="4" x:Name="lblTeléfono" VerticalOptions="Center" TextColor="Black" FontSize="17"/>
-                <Label Grid.Column="1" Grid.Row="5" x:Name="lblCódigo" VerticalOptions="Center" TextColor="Black" FontSize="17"/>
-                <Label Grid.Column="1" Grid.Row="6" x:Name="lblEstado" VerticalOptions="Center" TextColor="Black" FontSize="17"/>
+                                <Label Grid.Column="0"
+                                       Grid.Row="0"
+                                       Text="Repartidor:"
+                                       VerticalOptions="Center"
+                                       TextColor="Black"
+                                       FontAttributes="Bold"
+                                       FontSize="20" />
+                                <Label Grid.Column="0"
+                                       Grid.Row="1"
+                                       Text="Cliente:"
+                                       VerticalOptions="Center"
+                                       TextColor="Black"
+                                       FontAttributes="Bold"
+                                       FontSize="20" />
+                                <Label Grid.Column="0"
+                                       Grid.Row="2"
+                                       Text="Dirección:"
+                                       VerticalOptions="Center"
+                                       TextColor="Black"
+                                       FontAttributes="Bold"
+                                       FontSize="20" />
+                                <Label Grid.Column="0"
+                                       Grid.Row="3"
+                                       Text="Teléfono:"
+                                       VerticalOptions="Center"
+                                       TextColor="Black"
+                                       FontAttributes="Bold"
+                                       FontSize="20" />
+                                <Label Grid.Column="0"
+                                       Grid.Row="4"
+                                       Text="Código:"
+                                       VerticalOptions="Center"
+                                       TextColor="Black"
+                                       FontAttributes="Bold"
+                                       FontSize="20" />
+                                <Label Grid.Column="0"
+                                       Grid.Row="5"
+                                       Text="Estado:"
+                                       VerticalOptions="Center"
+                                       TextColor="Black"
+                                       FontAttributes="Bold"
+                                       FontSize="20" />
+                                <Label Grid.Column="0"
+                                       Grid.Row="6"
+                                       Text="Fecha envio:"
+                                       VerticalOptions="Center"
+                                       TextColor="Black"
+                                       FontAttributes="Bold"
+                                       FontSize="20" />
+                                <Label Grid.Column="0"
+                                       Grid.Row="7"
+                                       Text="Hora envio:"
+                                       VerticalOptions="Center"
+                                       TextColor="Black"
+                                       FontAttributes="Bold"
+                                       FontSize="20" />
 
+                                <Label Grid.Column="1"
+                                       Grid.Row="0"
+                                       x:Name="lblRepartidor"
+                                       VerticalOptions="Center"
+                                       TextColor="Black"
+                                       FontSize="17" />
+                                <Label Grid.Column="1"
+                                       Grid.Row="1"
+                                       x:Name="lblCliente"
+                                       VerticalOptions="Center"
+                                       TextColor="Black"
+                                       FontSize="17" />
+                                <Label Grid.Column="1"
+                                       Grid.Row="2"
+                                       x:Name="lblDirección"
+                                       VerticalOptions="Center"
+                                       TextColor="Black"
+                                       FontSize="17" />
+                                <Label Grid.Column="1"
+                                       Grid.Row="3"
+                                       x:Name="lblTeléfono"
+                                       VerticalOptions="Center"
+                                       TextColor="Black"
+                                       FontSize="17" />
+                                <Label Grid.Column="1"
+                                       Grid.Row="4"
+                                       x:Name="lblCódigo"
+                                       VerticalOptions="Center"
+                                       TextColor="Black"
+                                       FontSize="17" />
+                                <Label Grid.Column="1"
+                                       Grid.Row="5"
+                                       x:Name="lblEstado"
+                                       VerticalOptions="Center"
+                                       TextColor="Black"
+                                       FontSize="17" />
+                                <Label Grid.Column="1"
+                                       Grid.Row="6"
+                                       x:Name="lblFechaE"
+                                       VerticalOptions="Center"
+                                       TextColor="Black"
+                                       FontSize="17" />
+                                <Label Grid.Column="1"
+                                       Grid.Row="7"
+                                       x:Name="lblHoraE"
+                                       VerticalOptions="Center"
+                                       TextColor="Black"
+                                       FontSize="17" />
+
+                            </Grid>
+                        </StackLayout>
+                    </Frame>
+
+                    <Button Text="Lugar de entrega"
+                            BackgroundColor="#E6003e69"
+                            Grid.ColumnSpan="2"
+                            Grid.Row="3"
+                            BorderRadius="6"
+                            FontSize="20"
+                            TextColor="WhiteSmoke"
+                            Margin="20,0"
+                            Clicked="Button_Clicked" />
+                    <Label Grid.ColumnSpan="2"
+                           Grid.Row="4"
+                           Text="Actualización"
+                           HorizontalOptions="CenterAndExpand"
+                           Margin="30,10,0,0"
+                           TextColor="Black"
+                           FontAttributes="Bold"
+                           FontSize="25" />
+                    <Frame Grid.ColumnSpan="2"
+                           Grid.Row="5"
+                           Margin="10"
+                           CornerRadius="10"
+                           BackgroundColor="#B3FFFFFF">
+                        <StackLayout>
+                            <Grid ColumnDefinitions="auto,*"
+                                  RowDefinitions="*,*,300">
+                                <Label Grid.Column="0"
+                                       Grid.Row="0"
+                                       Text="Estado:"
+                                       VerticalOptions="Center"
+                                       Margin="0,0,0,0"
+                                       TextColor="Black"
+                                       FontAttributes="Bold"
+                                       FontSize="20" />
+                                <Picker Grid.Column="1"
+                                        Grid.Row="0"
+                                        x:Name="pkEstado"
+                                        Title="¡Selecciona un Estado!"
+                                        TitleColor="Red"
+                                        TextColor="Black"
+                                        SelectedIndexChanged="pkEstado_SelectedIndexChanged">
+                                    <Picker.ItemsSource>
+                                        <x:Array Type="{x:Type x:String}">
+                                            <x:String>Entregado</x:String>
+                                            <x:String>No entregado</x:String>
+                                        </x:Array>
+                                    </Picker.ItemsSource>
+                                    <!--<Picker.Items>
+                                        <x:String>Entregado</x:String>
+                                        <x:String>No entregado</x:String>
+                                    </Picker.Items>-->
+                                </Picker>
+                                <Image Grid.ColumnSpan="2"
+                                       Grid.Row="2"
+                                       x:Name="resultImage"
+                                       VerticalOptions="FillAndExpand"
+                                       HeightRequest="200" />
+                                <Button Text="Seleccionar foto"
+                                        x:Name="TakePhoto"
+                                        Grid.ColumnSpan="2"
+                                        Grid.Row="1"
+                                        FontSize="20"
+                                        BorderRadius="6"
+                                        BackgroundColor="#E6003e69"
+                                        TextColor="WhiteSmoke"
+                                        Clicked="TakePhoto_Clicked" />
+                            </Grid>
+                            <Button Text="QR de confirmación"
+                                    x:Name="QrConfirmacion"
+                                    FontSize="18"
+                                    BorderRadius="6"
+                                    BackgroundColor="#E6003e69"
+                                    TextColor="WhiteSmoke"
+                                    Clicked="QrConfirmacion_Clicked"/>
+                            <Button Text="Actualizar" 
+                                    x:Name="ActualizarP"
+                                    FontSize="18"
+                                    BorderRadius="6"
+                                    BackgroundColor="#E6003e69"
+                                    TextColor="WhiteSmoke"
+                                    Clicked="ActualizarP_Clicked"/>
+                        </StackLayout>
+                    </Frame>
+                </Grid>
             </Grid>
-        </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

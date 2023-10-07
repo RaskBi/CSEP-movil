@@ -12,6 +12,7 @@ using System.Text.Json;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.IO;
 
 namespace CSEP.Views
 {
@@ -25,8 +26,51 @@ namespace CSEP.Views
         public Login()
         {
             InitializeComponent();
+            autoLogin();
+            Task.Run(AnimateBackground);
         }
 
+        async private void autoLogin()
+        {
+            var fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "token.txt");
+            if (File.Exists(fileName))
+            {
+                string tokenRead = File.ReadAllText(fileName);
+                Console.WriteLine(tokenRead);
+                obtenerRol(tokenRead);
+            }
+        }
+
+        private async void obtenerRol(string token)
+        {
+            //verificacion de rol
+            var client = new HttpClient();
+            client = new HttpClient();
+            var request2 = new HttpRequestMessage
+            {
+                Method = HttpMethod.Get,
+                RequestUri = new Uri(url.baseurl + "/user/profile"),
+                Headers =
+                            {
+                                { "Authorization", "Token " + token },
+                            },
+            };
+            using (var response2 = await client.SendAsync(request2))
+            {
+                response2.EnsureSuccessStatusCode();
+                var body2 = await response2.Content.ReadAsStringAsync();
+                Console.WriteLine(body2);
+                user = JsonSerializer.Deserialize<user>(body2);
+            }
+            if (user.rol.Equals("R"))
+            {
+                await Navigation.PushAsync(new MenuR());
+            }
+            else
+            {
+                await Navigation.PushAsync(new Menu());
+            }
+        }
        
         async private void btnIngresar_Clicked(object sender, EventArgs e)
         {
@@ -54,33 +98,15 @@ namespace CSEP.Views
                     if (response.IsSuccessStatusCode)
                     {
                         token = JsonSerializer.Deserialize<autorizacion>(body);
-                        //verificacion de rol
-                        client = new HttpClient();
-                        var request2 = new HttpRequestMessage
-                        {
-                            Method = HttpMethod.Get,
-                            RequestUri = new Uri(url.baseurl + "/user/profile"),
-                            Headers =
-                    {
-                        { "Authorization", "Token " + token.token },
-                    },
-                        };
-                        using (var response2 = await client.SendAsync(request2))
-                        {
-                            response.EnsureSuccessStatusCode();
-                            var body2 = await response2.Content.ReadAsStringAsync();
-                            Console.WriteLine(body2);
-                            user = JsonSerializer.Deserialize<user>(body2);
 
-                        }
-                        if (user.rol.Equals("R"))
-                        {
-                            await Navigation.PushAsync(new Paquetes());
-                        }
-                        else
-                        {
-                            await Navigation.PushAsync(new Busqueda());
-                        }
+                        //Guardar token
+                        var fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "token.txt");
+                        var text = token.token;
+                        File.WriteAllText(fileName, text);
+                        string textRead = File.ReadAllText(fileName);
+                        Console.WriteLine(fileName);
+
+                        obtenerRol(text);
                     }
                     else
                     {
@@ -104,7 +130,21 @@ namespace CSEP.Views
 
         async private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            await DisplayAlert("Alerta", "¡Te enviaremos un correo!", "OK");
+            await Navigation.PushAsync(new RecuperarPassword());
+        }
+        private async void AnimateBackground()
+        {
+            Action<Double> forward = input => bdGradient.AnchorY = input;
+            Action<Double> backward = input => bdGradient.AnchorY = input;
+
+            while (true)
+            {
+                bdGradient.Animate(name: "forward", callback: forward, start: 0, end: 1, length: 5000, easing: Easing.SinIn);
+                await Task.Delay(5000);
+
+                bdGradient.Animate(name: "backward", callback: forward, start: 1, end: 0, length: 5000, easing: Easing.SinIn);
+                await Task.Delay(5000);
+            }
         }
     }
 }

@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CSEP.Views.PaquetesURecibidos"
+             Title="Paquetes recibidos">
+    <ContentPage.Content>
+        <Grid>
+            <BoxView x:Name="bdGradient"
+                     Scale="3"
+                     AnchorX="1"
+                     AnchorY="0">
+                <BoxView.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#000046"
+                                      Offset="0.1" />
+                        <GradientStop Color="#1CB5E0"
+                                      Offset="0.5" />
+                        <GradientStop Color="#159957"
+                                      Offset="1.0" />
+                    </LinearGradientBrush>
+                </BoxView.Background>
+            </BoxView>
+            <StackLayout Margin="10,20,10,0">
+
+                <ListView x:Name="listPaquetes"
+                          HasUnevenRows="True"
+                          SeparatorVisibility="None"
+                          ItemTapped="listPaquetes_ItemTapped">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Padding="5"
+                                      BackgroundColor="Transparent">
+                                    <Frame BackgroundColor="#B3FFFFFF"
+                                           CornerRadius="6"
+                                           HasShadow="True">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Image Source="box.png"
+                                                   HeightRequest="50"
+                                                   Margin="0,0,10,0" />
+                                            <StackLayout>
+                                                <Grid RowDefinitions="Auto,Auto,Auto"
+                                                      ColumnDefinitions="Auto,*">
+                                                    <!-- Primera fila -->
+                                                    <Image Grid.Row="0"
+                                                           Grid.Column="0"
+                                                           Source="userIcon.png"
+                                                           HeightRequest="24" />
+                                                    <Label Grid.Row="0"
+                                                           Grid.Column="1"
+                                                           x:Name="lblnombre"
+                                                           Text="{Binding full_name_user}"
+                                                           FontSize="Large"
+                                                           TextColor="Black" />
+
+                                                    <!-- Segunda fila -->
+                                                    <Image Grid.Row="1"
+                                                           Grid.Column="0"
+                                                           Source="phoneIcon.png"
+                                                           HeightRequest="24" />
+                                                    <Label Grid.Row="1"
+                                                           Grid.Column="1"
+                                                           x:Name="lbltelefono"
+                                                           Text="{Binding paq_telefono}"
+                                                           FontSize="Large"
+                                                           TextColor="Black" />
+
+                                                    <!-- Tercera fila -->
+                                                    <Image Grid.Row="2"
+                                                           Grid.Column="0"
+                                                           Source="pinIcon.png"
+                                                           HeightRequest="24" />
+                                                    <Label Grid.Row="2"
+                                                           Grid.Column="1"
+                                                           x:Name="lbldesc"
+                                                           Text="{Binding paq_direccion}"
+                                                           TextColor="Black" />
+                                                </Grid>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </Frame>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,17 +1,33 @@
 {
   "version": 2,
-  "dgSpecHash": "hSgCzJBwY1k65GcTpe8vgwn5m6/5abuFWs0ZNtrXmb42ozsTONsPEBF7wJ96W9eKG2jsZylWR/xIUrskpxKGeQ==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\Rask\\source\\repos\\CSEP\\CSEP.Android\\CSEP.Android.csproj",
+  "dgSpecHash": "SdZGCb9XMZaXhcp9swmbic+i3oO9wJz+B4P2ffWQ1uwkrCD0mUSjyWdCaPwpWoZodDEGsZvNBPBHBcaDE+BNQQ==",
+  "success": false,
+  "projectFilePath": "D:\\Rask\\OneDrive - integrate transparent metrics\\Documentos\\UIS 9\\Titulación\\Mobile\\CSEP\\CSEP.Android\\CSEP.Android.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Rask\\.nuget\\packages\\fastandroidcamera\\2.0.0\\fastandroidcamera.2.0.0.nupkg.sha512",
     "C:\\Users\\Rask\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",
     "C:\\Users\\Rask\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Rask\\.nuget\\packages\\plugin.currentactivity\\2.1.0.2\\plugin.currentactivity.2.1.0.2.nupkg.sha512",
+    "C:\\Users\\Rask\\.nuget\\packages\\plugin.permissions\\3.0.0.12\\plugin.permissions.3.0.0.12.nupkg.sha512",
     "C:\\Users\\Rask\\.nuget\\packages\\restsharp\\108.0.1\\restsharp.108.0.1.nupkg.sha512",
     "C:\\Users\\Rask\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\Rask\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Rask\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
     "C:\\Users\\Rask\\.nuget\\packages\\system.text.encodings.web\\5.0.0\\system.text.encodings.web.5.0.0.nupkg.sha512",
     "C:\\Users\\Rask\\.nuget\\packages\\system.text.json\\5.0.0\\system.text.json.5.0.0.nupkg.sha512",
+    "C:\\Users\\Rask\\.nuget\\packages\\xam.plugin.media\\4.0.1.5\\xam.plugin.media.4.0.1.5.nupkg.sha512",
+    "C:\\Users\\Rask\\.nuget\\packages\\xamarin.android.arch.core.common\\1.1.1.3\\xamarin.android.arch.core.common.1.1.1.3.nupkg.sha512",
+    "C:\\Users\\Rask\\.nuget\\packages\\xamarin.android.arch.lifecycle.common\\1.1.1.3\\xamarin.android.arch.lifecycle.common.1.1.1.3.nupkg.sha512",
+    "C:\\Users\\Rask\\.nuget\\packages\\xamarin.android.arch.lifecycle.runtime\\1.1.1.3\\xamarin.android.arch.lifecycle.runtime.1.1.1.3.nupkg.sha512",
+    "C:\\Users\\Rask\\.nuget\\packages\\xamarin.android.support.annotations\\28.0.0.3\\xamarin.android.support.annotations.28.0.0.3.nupkg.sha512",
+    "C:\\Users\\Rask\\.nuget\\packages\\xamarin.android.support.collections\\28.0.0.3\\xamarin.android.support.collections.28.0.0.3.nupkg.sha512",
+    "C:\\Users\\Rask\\.nuget\\packages\\xamarin.android.support.compat\\28.0.0.3\\xamarin.android.support.compat.28.0.0.3.nupkg.sha512",
+    "C:\\Users\\Rask\\.nuget\\packages\\xamarin.android.support.core.ui\\25.4.0.2\\xamarin.android.support.core.ui.25.4.0.2.nupkg.sha512",
+    "C:\\Users\\Rask\\.nuget\\packages\\xamarin.android.support.core.utils\\25.4.0.2\\xamarin.android.support.core.utils.25.4.0.2.nupkg.sha512",
+    "C:\\Users\\Rask\\.nuget\\packages\\xamarin.android.support.fragment\\25.4.0.2\\xamarin.android.support.fragment.25.4.0.2.nupkg.sha512",
+    "C:\\Users\\Rask\\.nuget\\packages\\xamarin.android.support.media.compat\\25.4.0.2\\xamarin.android.support.media.compat.25.4.0.2.nupkg.sha512",
+    "C:\\Users\\Rask\\.nuget\\packages\\xamarin.android.support.v4\\25.4.0.2\\xamarin.android.support.v4.25.4.0.2.nupkg.sha512",
+    "C:\\Users\\Rask\\.nuget\\packages\\xamarin.android.support.versionedparcelable\\28.0.0.3\\xamarin.android.support.versionedparcelable.28.0.0.3.nupkg.sha512",
     "C:\\Users\\Rask\\.nuget\\packages\\xamarin.androidx.activity\\1.2.4.1\\xamarin.androidx.activity.1.2.4.1.nupkg.sha512",
     "C:\\Users\\Rask\\.nuget\\packages\\xamarin.androidx.annotation\\1.2.0.1\\xamarin.androidx.annotation.1.2.0.1.nupkg.sha512",
     "C:\\Users\\Rask\\.nuget\\packages\\xamarin.androidx.annotation.experimental\\1.1.0.1\\xamarin.androidx.annotation.experimental.1.1.0.1.nupkg.sha512",
@@ -67,8 +83,22 @@
     "C:\\Users\\Rask\\.nuget\\packages\\xamarin.androidx.viewpager2\\1.0.0.10\\xamarin.androidx.viewpager2.1.0.0.10.nupkg.sha512",
     "C:\\Users\\Rask\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
     "C:\\Users\\Rask\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512",
+    "C:\\Users\\Rask\\.nuget\\packages\\xamarin.forms.saveopenpdfpackage\\1.0.0\\xamarin.forms.saveopenpdfpackage.1.0.0.nupkg.sha512",
+    "C:\\Users\\Rask\\.nuget\\packages\\xamarin.forms.visual.material\\5.0.0.2196\\xamarin.forms.visual.material.5.0.0.2196.nupkg.sha512",
     "C:\\Users\\Rask\\.nuget\\packages\\xamarin.google.android.material\\1.4.0.2\\xamarin.google.android.material.1.4.0.2.nupkg.sha512",
-    "C:\\Users\\Rask\\.nuget\\packages\\xamarin.google.guava.listenablefuture\\1.0.0.2\\xamarin.google.guava.listenablefuture.1.0.0.2.nupkg.sha512"
+    "C:\\Users\\Rask\\.nuget\\packages\\xamarin.google.guava.listenablefuture\\1.0.0.2\\xamarin.google.guava.listenablefuture.1.0.0.2.nupkg.sha512",
+    "C:\\Users\\Rask\\.nuget\\packages\\zxing.net.mobile\\2.4.1\\zxing.net.mobile.2.4.1.nupkg.sha512",
+    "C:\\Users\\Rask\\.nuget\\packages\\zxing.net.mobile.forms\\2.4.1\\zxing.net.mobile.forms.2.4.1.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1107",
+      "level": "Error",
+      "message": "Se detectó un conflicto de versiones para Xamarin.Android.Support.Compat. Para resolver este problema, instale o haga referencia a Xamarin.Android.Support.Compat 28.0.0.3 directamente en el proyecto CSEP.Android. \r\n CSEP.Android -> CSEP -> Xamarin.Forms.SaveOpenPDFPackage 1.0.0 -> Xamarin.Android.Support.Compat (>= 28.0.0.3) \r\n CSEP.Android -> Xam.Plugin.Media 4.0.1.5 -> Xamarin.Android.Support.Core.Utils 25.4.0.2 -> Xamarin.Android.Support.Compat (= 25.4.0.2).",
+      "libraryId": "Xamarin.Android.Support.Compat",
+      "targetGraphs": [
+        "MonoAndroid,Version=v12.0"
+      ]
+    }
+  ]
 }
